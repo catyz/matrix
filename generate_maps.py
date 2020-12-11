@@ -11,7 +11,8 @@ def parse_arguments():
     parser.add_argument(
         '--nside',
         required=False,
-        default=64,
+        default=256,
+        type=np.int,
         help='nside of map',
     )
 
@@ -19,6 +20,7 @@ def parse_arguments():
         '--mode',
         required=False,
         default='both',
+        type=np.str,
         help='E or B or both'
     )
 
@@ -26,28 +28,23 @@ def parse_arguments():
         '--nreal',
         required=False,
         type=np.int8,
-        default=3,
+        default=1,
         help='Number of maps'
     )
 
-    parser.add_argument(
-        '--lmax',
-        required=False,
-        default=100,
-        help='ell max'
-    )
     args = parser.parse_args()
     return args
 
 def make_cl(args, mode):
-    cl_TT = [0 for l in range(2, args.lmax)]
+    lmax = 3*args.nside-1
+    cl_TT = [0 for l in range(2, lmax)]
     if mode == 'B':
-        cl_EE = [0 for l in range(2, args.lmax)]
-        cl_BB = [1/l**2 for l in range(2, args.lmax)]
+        cl_EE = [0 for l in range(2, lmax)]
+        cl_BB = [1/l**2 for l in range(2, lmax)]
     if mode == 'E':
-        cl_EE = [1/l**2 for l in range(2, args.lmax)]
-        cl_BB = [0 for l in range(2, args.lmax)]
-    cl_TE = [0 for l in range(2, args.lmax)]
+        cl_EE = [1/l**2 for l in range(2, lmax)]
+        cl_BB = [0 for l in range(2, lmax)]
+    cl_TE = [0 for l in range(2, lmax)]
     cl = cl_TT, cl_EE, cl_BB, cl_TE
     for c in cl:
         for i in range(2):
@@ -57,9 +54,8 @@ def make_cl(args, mode):
 def make_maps(args, cl, mode):
     for i in range(args.nreal):
         print(f'Processing {mode}, realization {i}')
-        alms = hp.synalm(cl, new=True)
-        m = hp.alm2map(alms, args.nside, pol=True)
-        hp.write_map(f"./input_maps/{mode}/{mode}_map_{i}.fits", m, overwrite=True, nest= True, dtype=np.float32)
+        m = hp.synfast(cl, args.nside, pol=True, new=True)
+        hp.write_map(f"./input_maps/{mode}/{mode}_map_{i}.fits", hp.reorder(m, r2n=True), overwrite=True, nest= True, dtype=np.float64)
 
 def make_E_maps(args):
     mode = 'E'

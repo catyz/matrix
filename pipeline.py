@@ -19,7 +19,6 @@ parser = argparse.ArgumentParser(
         fromfile_prefix_chars="@",
     )
 
-#Add arguments for toast operators inputs
 sa_tpt.add_general_args(parser)
 tpt.add_noise_args(parser)
 tpt.add_atmosphere_args(parser)
@@ -29,21 +28,14 @@ tpt.add_pointing_args(parser)
 tpt.add_mapmaker_args(parser)
 
 args = parser.parse_args()
-
-#Set the name of the data tod 
 data_prefix = 'data'
 
-############################### NORMAL SA PIPELINE  ##############################################
 run_id = args.run_id
 subrun_id = args.subrun_id
 
 obs = sa_ob.Observation((run_id,subrun_id)) 
 obs.detectors = ['13.10_112.90B'] 
 obs.load_metadata()
-
-# len_sec = (obs.last_mjd-obs.first_mjd)*24*3600
-# obs.len_sec = len_sec
-# obs.scan_freq = 5
 
 pi = sa_pi.InputLevel0CachedByObsID(
     all_detectors = obs.detectors,
@@ -65,22 +57,15 @@ sa_operator_stack = sa_pf.OperatorComposite(
     sa_pf.OperatorDataInitializer(pi),
 )
 sa_operator_stack.filter_obs(obs) 
-############################### NORMAL SA PIPELINE  ##############################################
 
 
-#Here begins the simulation part (TOAST)
-
-#Set names of simulated tods
 sims_prefix = 'mc'    
 
-#Pack the toast data object with everything the operators need
 data, comm = sa_tpt.make_toast_data(args, obs_list=[obs], sims_prefix=sims_prefix, data_prefix=data_prefix)
 
-mc_start = args.mc_start #Starting random seed for toast simulations
-nsims = args.nsims #Number of sims to run
+mc_start = args.mc_start 
+nsims = args.nsims 
 
-
-#Below is just an example of what you could run
 tpt.expand_pointing(args, comm, data)
 
 for mc in range(mc_start, mc_start + nsims):
@@ -89,7 +74,7 @@ for mc in range(mc_start, mc_start + nsims):
 
     print(f'Processing {total_prefix}')
     
-#    tpt.simulate_atmosphere(args, comm, data, mc, total_prefix) #Make sure to delete './atm_cache' when using new  random seeds/observations
+#    tpt.simulate_atmosphere(args, comm, data, mc, total_prefix) 
     
 #    tpt.scale_atmosphere_by_frequency(args, comm, data, freq=None, mc=mc, cache_name=total_prefix) 
 
@@ -98,14 +83,12 @@ for mc in range(mc_start, mc_start + nsims):
 #    tpt.simulate_noise(args, comm, data, mc, total_prefix)
 
 #    tpt.simulate_sss(args, comm, data, mc, total_prefix)  
-    outpath = "{}/{}".format(args.outpath, mc) #Out directory for maps if using toast mapmaker
+    outpath = "{}/{}".format(args.outpath, mc) 
     
-    tpt.apply_mapmaker(args, comm, data, outpath, total_prefix) #Actually filters the tods, so don't run this if you just want the tods
+    tpt.apply_mapmaker(args, comm, data, outpath, total_prefix) 
 
-#Appends -I to the cachenames of simulated tods to match SA format
 sa_tpt.add_suffix_to_detname(data, sims_prefix, data_prefix, suffix='-I')
 
-#Makeshift SA operator, just loops through tods and plots them
 # import matplotlib.pyplot as plt
 # fig,ax = plt.subplots(2,1, sharex=True)
 

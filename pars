@@ -5,9 +5,9 @@
 --mc-start
 0
 --nsims
-3
+10
 --nside
-64
+256
 --sample-rate
 152.58
 --input-map
@@ -17,6 +17,9 @@ focalplane.pkl
 --outpath
 ./out_maps
 --no-zip
+--mapmaker-prefix
+E
+--no-det-noise
 --simulate-noise
 --simulate-sky
 --simulate-ground
