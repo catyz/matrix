@@ -5,7 +5,7 @@
 --mc-start
 0
 --nsims
-10
+1
 --nside
 256
 --sample-rate

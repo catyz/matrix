@@ -37,7 +37,7 @@ def parse_arguments():
 
 def make_cl(args, mode):
     lmax = 3*args.nside-1
-    cl_TT = [0 for l in range(2, lmax)]
+    cl_TT = [1/l**2 for l in range(2, lmax)]
     if mode == 'B':
         cl_EE = [0 for l in range(2, lmax)]
         cl_BB = [1/l**2 for l in range(2, lmax)]
