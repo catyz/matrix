@@ -34,12 +34,13 @@ run_id = args.run_id
 subrun_id = args.subrun_id
 
 obs = sa_ob.Observation((run_id,subrun_id)) 
-obs.detectors = ['13.10_112.90B'] 
+#obs.detectors = ['13.10_112.90B', '13.10_112.90T'] 
+obs.detectors = ['13.13_135.150T','13.13_135.150B', '13.13_155.150T','13.13_155.150B']
 obs.load_metadata()
 
 pi = sa_pi.InputLevel0CachedByObsID(
     all_detectors = obs.detectors,
-    n_per_cache = 1,
+    n_per_cache = 6,
     load_slowdaq = False,
     load_hwp = False,
     load_dets = True, 
@@ -85,9 +86,9 @@ for mc in range(mc_start, mc_start + nsims):
 #    tpt.simulate_sss(args, comm, data, mc, total_prefix)  
     outpath = "{}/{}".format(args.outpath, mc) 
     
-    tpt.apply_mapmaker(args, comm, data, outpath, total_prefix) 
+    tpt.apply_mapmaker(args, comm, data, outpath, total_prefix, bin_only=True) 
 
-sa_tpt.add_suffix_to_detname(data, sims_prefix, data_prefix, suffix='-I')
+#sa_tpt.add_suffix_to_detname(data, sims_prefix, data_prefix, suffix='-I')
 
 # import matplotlib.pyplot as plt
 # fig,ax = plt.subplots(2,1, sharex=True)
