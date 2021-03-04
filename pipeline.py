@@ -26,6 +26,8 @@ tpt.add_sss_args(parser)
 tpt.add_sky_map_args(parser)
 tpt.add_pointing_args(parser)
 tpt.add_mapmaker_args(parser)
+tpt.add_polyfilter_args(parser)
+tpt.add_groundfilter_args(parser)
 
 args = parser.parse_args()
 data_prefix = 'data'
@@ -69,24 +71,44 @@ nsims = args.nsims
 
 tpt.expand_pointing(args, comm, data)
 
+from scipy import signal
+sos = signal.butter(2, 0.1, 'hp', fs=152.58789, output='sos')
+
+def high_pass_filter(sos, data, total_prefix):            
+    print('High pass filtering')
+    for obs in data.obs:
+        for det in obs['tod'].detectors:
+            ref = obs['tod'].cache[f'{total_prefix}_{det}']
+            filtered = signal.sosfilt(sos, ref)
+            obs['tod'].cache[f'{total_prefix}_{det}'] = filtered
+    
 for mc in range(mc_start, mc_start + nsims):
     
     total_prefix = sims_prefix+str(mc)        
 
     print(f'Processing {total_prefix}')
     
+    outpath = "{}/{}".format(args.outpath, mc) 
+
 #    tpt.simulate_atmosphere(args, comm, data, mc, total_prefix) 
     
 #    tpt.scale_atmosphere_by_frequency(args, comm, data, freq=None, mc=mc, cache_name=total_prefix) 
 
     tpt.scan_sky_signal(args, comm, data, total_prefix, mc=mc)
-
+    
 #    tpt.simulate_noise(args, comm, data, mc, total_prefix)
 
 #    tpt.simulate_sss(args, comm, data, mc, total_prefix)  
-    outpath = "{}/{}".format(args.outpath, mc) 
     
+    high_pass_filter(sos, data, total_prefix)
+
+#     tpt.apply_polyfilter(args, comm, data, total_prefix)
+    
+#     tpt.apply_groundfilter(args, comm, data, total_prefix)
+
     tpt.apply_mapmaker(args, comm, data, outpath, total_prefix, bin_only=True) 
+            
+    
 
 #sa_tpt.add_suffix_to_detname(data, sims_prefix, data_prefix, suffix='-I')
 

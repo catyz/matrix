@@ -4,7 +4,7 @@ import argparse
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description="Generate maps with CAMB cls",
+        description="Generate maps with pure E/B cls",
         fromfile_prefix_chars="@",
     )
 
@@ -15,14 +15,6 @@ def parse_arguments():
         type=np.int,
         help='nside of map',
     )
-
-#     parser.add_argument(
-#         '--mode',
-#         required=False,
-#         default='both',
-#         type=np.str,
-#         help='E or B or both'
-#     )
 
     parser.add_argument(
         '--nreal',
@@ -67,17 +59,27 @@ def load_cl(args):
    
     return cl
     
-def make_cl(args):
+def make_cl(args, mode):
     lmax = 3*args.nside-1
     
-#     cl_TT = np.ones(lmax+1)
-#     cl_BB = np.ones(lmax+1)
-#     cl_EE = np.ones(lmax+1)
-#     cl_TE = np.zeros(lmax+1)
+    if mode == 'E':
+        cl_TT = np.zeros(lmax+1)
+        cl_EE = np.ones(lmax+1)
+        cl_BB = np.zeros(lmax+1)
+        cl_TE = np.zeros(lmax+1)
+        
+    if mode == 'B':
+        cl_TT = np.zeros(lmax+1)
+        cl_EE = np.zeros(lmax+1)
+        cl_BB = np.ones(lmax+1)
+        cl_TE = np.zeros(lmax+1)
     
-#     cl_TT[0] = cl_TT[1] = 0
-#     cl_BB[0] = cl_BB[1] = 0
-#     cl_EE[0] = cl_EE[1] = 0
+    cl_TT[0] = cl_TT[1] = 0
+    cl_BB[0] = cl_BB[1] = 0
+    cl_EE[0] = cl_EE[1] = 0
+    cl_TE[0] = cl_TE[1] = 0
+    
+    
         
 #     cl_TT = [2*np.pi/(ell * (ell + 1)) for ell in range(2, lmax+1)]
 #     #cl_EE = [0 for l in range(2, lmax)]
@@ -96,34 +98,32 @@ def make_cl(args):
     cl = np.array([cl_TT, cl_EE, cl_BB, cl_TE])
     cl *= prefactor
     
-    total = np.array([ell, cl_TT, cl_EE, cl_BB, cl_TE])
-    np.savetxt('test_dls.txt', np.transpose(total))
+#     total = np.array([ell, cl_TT, cl_EE, cl_BB, cl_TE])
+#     np.savetxt('test_dls.txt', np.transpose(total))
     
     return cl
 
-def make_maps(args):
-    cl = load_cl(args)
+def make_maps(args, cl, mode):
     for i in range(args.nreal):
-        print(f'Processing realization {i}')
+        print(f'Processing {mode} realization {i}')
         m = hp.synfast(cl, args.nside, lmax=3*args.nside-1, pol=True, new=True)
         #m_smooth = hp.smoothing(m, args.beamfwhm *np.pi/10800)
-        hp.write_map(f"./input_maps/map_{i}.fits", hp.reorder(m, r2n=True), overwrite=True, nest= True, dtype=np.float64)
-        #hp.write_map(f"./input_maps/{mode}_Q/{mode}_Q_map_{i}.fits", hp.reorder(m[1], r2n=True), overwrite=True, nest= True, dtype=np.float64)
-        #hp.write_map(f"./input_maps/{mode}_U/{mode}_U_map_{i}.fits", hp.reorder(m[2], r2n=True), overwrite=True, nest= True, dtype=np.float64)
+        hp.write_map(f"./pure_maps/{mode}/{mode}_map_{i}.fits", hp.reorder(m, r2n=True), overwrite=True, nest= True, dtype=np.float64)
+
+def make_E_maps(args):
+    mode = 'E'
+    cl = make_cl(args, mode)
+    make_maps(args, cl, mode)
         
-# def make_E_maps(args):
-#     mode = 'E'
-#     cl = make_cl(args, mode)
-#     make_maps(args, cl, mode)
-        
-# def make_B_maps(args):
-#     mode = 'B'
-#     cl = make_cl(args, mode)
-#     make_maps(args, cl, mode)
+def make_B_maps(args):
+    mode = 'B'
+    cl = make_cl(args, mode)
+    make_maps(args, cl, mode)
     
 def main():
     args=parse_arguments()
-    make_maps(args)
+    make_E_maps(args)
+    make_B_maps(args)
     
 if __name__ == "__main__":
     main()
