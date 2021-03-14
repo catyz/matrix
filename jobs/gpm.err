@@ -1,0 +1,642 @@
+/global/cscratch1/sd/yzh/matrix/generate_pure_maps.py:74: RuntimeWarning: divide by zero encountered in true_divide
+  prefactor = 2*np.pi/(ell * (ell + 1))
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:822: UserWarning: Sigma is 0.000000 arcmin (0.000000 rad) 
+  warnings.warn(
+/global/homes/y/yzh/.conda/envs/myenv/lib/python3.9/site-packages/healpy/sphtfunc.py:827: UserWarning: -> fwhm is 0.000000 arcmin
+  warnings.warn(
