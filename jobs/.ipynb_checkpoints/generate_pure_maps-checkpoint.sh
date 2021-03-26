@@ -7,7 +7,9 @@ export OMP_PROC_BIND=spread
 
 module load openmpi
 
-cat << EOF > gpm.sl 
+NAME='gpm'
+
+cat << EOF > $NAME.sl 
 #!/bin/bash
 #SBATCH --nodes 5
 #SBATCH --ntasks-per-node 32
@@ -16,15 +18,14 @@ cat << EOF > gpm.sl
 
 #SBATCH -q debug
 #SBATCH -C haswell
-#SBATCH -o gpm.out
-#SBATCH -e gpm.err
+#SBATCH -o $NAME.out
+#SBATCH -e $NAME.err
 
 conda activate myenv
 
 srun --cpu_bind=cores python3 /global/cscratch1/sd/yzh/matrix/generate_pure_maps.py --nreal 1700 --outpath /global/cscratch1/sd/yzh/matrix/pure_maps
 
-
 #cp <my_output_file> <target_location>/.
 EOF
 
-sbatch gpm.sl
+sbatch $NAME.sl

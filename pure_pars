@@ -5,13 +5,13 @@
 --mc-start
 0
 --nsims
-1700
+1
 --nside
 128
 --sample-rate
 152.58789
 --input-map
-./pure_maps/B/B_map_{mc}.fits
+./healpy_maps/B/map_{mc}.fits
 --focalplane
 focalplane.pkl
 --outpath

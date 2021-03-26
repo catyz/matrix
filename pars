@@ -5,7 +5,7 @@
 --mc-start
 0
 --nsims
-100
+1
 --nside
 128
 --sample-rate
@@ -22,7 +22,7 @@ focalplane.pkl
 3
 --no-zip
 --mapmaker-prefix
-lcdm
+toast
 --simulate-noise
 --simulate-sky
 --simulate-ground

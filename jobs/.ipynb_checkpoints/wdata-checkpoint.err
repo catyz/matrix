@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/global/cscratch1/sd/yzh/matrix/write_data.py", line 110, in <module>
+    main()
+  File "/global/cscratch1/sd/yzh/matrix/write_data.py", line 99, in main
+    X_E = comm.gather(X_E, root=0)
+  File "mpi4py/MPI/Comm.pyx", line 1262, in mpi4py.MPI.Comm.gather
+  File "mpi4py/MPI/msgpickle.pxi", line 680, in mpi4py.MPI.PyMPI_gather
+  File "mpi4py/MPI/msgpickle.pxi", line 685, in mpi4py.MPI.PyMPI_gather
+  File "mpi4py/MPI/msgpickle.pxi", line 148, in mpi4py.MPI.Pickle.allocv
+  File "mpi4py/MPI/msgpickle.pxi", line 139, in mpi4py.MPI.Pickle.alloc
+SystemError: Negative size passed to PyBytes_FromStringAndSize

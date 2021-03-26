@@ -100,7 +100,7 @@ for mc in range(mc_start, mc_start + nsims):
 
 #    tpt.simulate_sss(args, comm, data, mc, total_prefix)  
     
-    high_pass_filter(sos, data, total_prefix)
+#    high_pass_filter(sos, data, total_prefix)
 
 #     tpt.apply_polyfilter(args, comm, data, total_prefix)
     
