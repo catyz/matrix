@@ -38,6 +38,7 @@ def main():
     
     C_E, C_B = load_covariance(args)
     B_eigs = solve_eigs(args, C_E, C_B)
+    print(f'Eig range is from {B_eigs[0][0]} to {B_eigs[0][-1]}')
     
 #     with open(f'{args.workdir}/{name}_{args.e}.pkl', 'wb') as f:
 #         pickle.dump(eigs, f, protocol=pickle.HIGHEST_PROTOCOL)

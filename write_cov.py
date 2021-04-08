@@ -1,17 +1,18 @@
 import numpy as np
 import healpy as hp
 import scipy.sparse as sparse
-#import pymaster as nmt
+import pymaster as nmt
 from mpi4py import MPI
 import argparse
 import time
 from glob import glob
 import os
 import functools
+from generate_maps import make_cl
 
 def add_cov_args(parser):
     parser.add_argument(
-        '-nreal',
+        '--nreal',
         required=False,
         default=1,
         type=int,
@@ -19,7 +20,7 @@ def add_cov_args(parser):
     )
     
     parser.add_argument(
-        '-nside',
+        '--nside',
         required=False,
         default=128,
         type=int,
@@ -27,7 +28,14 @@ def add_cov_args(parser):
     )
     
     parser.add_argument(
-        '-workdir',
+        '--map-disk',
+        required=False,
+        action='store_true',
+        help='Read maps from disk'
+    )
+    
+    parser.add_argument(
+        '--workdir',
         required=False,
         default='/global/cscratch1/sd/yzh/matrix',
         help='omegalul'
@@ -55,7 +63,8 @@ def sparse_covariance(X):
     n = X.shape[0]
     means = np.array(X.mean(axis=0))[0]
     nz = np.where(means!=0)[0]
-
+    
+    #Center the data
     for i in nz:
         X[:,i] -= np.ones((n,1))*means[i]
 
@@ -85,12 +94,8 @@ def make_cov(args, comm):
     X_B = sparse.coo_matrix(m_vector)
     
     if rank == 0:
-        mask = hp.read_map('./toast_pure_maps/0/B_telescope_all_time_all_invnpp.fits',verbose=False, dtype=np.float64)
-        mask[np.where(mask!=0)] = 1
-        #apo_degree = 5
-        #mask = nmt.mask_apodization(mask, apo_degree, apotype='C1')
-        #print(f'Apodization degree {apo_degree}')
-        
+        #mask = hp.read_map(f'{args.workdir}/small_patch_apo.fits',verbose=False, dtype=np.float64)       
+        mask = hp.read_map(f'{args.workdir}/south_patch_apo.fits', verbose=False, dtype=np.float64)        
         reals = np.arange(nreal)
         chunks = np.array_split(reals, size)
     else:
@@ -100,26 +105,37 @@ def make_cov(args, comm):
     mask = comm.bcast(mask, root=0)
     chunk = comm.scatter(chunks, root=0)
     
-    for i in range(chunk[0], chunk[-1]+1):
-
+    for i in chunk:
         print(f'Rank {rank} processing map {i} on processor {name}')
-            
-        m_vector = np.concatenate(mask*hp.read_map(f'{args.workdir}/pure_maps/E/E_map_{i}.fits', field=[1,2], verbose=False, dtype=np.float64))
-#         m_vector = np.concatenate(mask_apo*hp.read_map(f'./out_pure_maps/{i+1}/E_telescope_all_time_all_binned.fits', field=[1,2], verbose=False, dtype=np.float64))
-#        remove_nans(m_vector)
+        
+        if args.map_disk: 
+            m_vector = np.concatenate(mask*hp.read_map(f'{args.workdir}/healpy_maps/E/map_{i}.fits', field=[1,2], verbose=False, dtype=np.float64))
+        else:
+            cl = make_cl(args, comm, 'E')
+            m_vector = np.concatenate(mask*hp.synfast(cl, args.nside, lmax=3*args.nside-1, pol=True, new=True)[1:])
         X_E = sparse.vstack((X_E, m_vector))
         
-        m_vector = np.concatenate(mask*hp.read_map(f'{args.workdir}/pure_maps/B/B_map_{i}.fits', field=[1,2], verbose=False, dtype=np.float64))
-#         m_vector = np.concatenate(mask_apo*hp.read_map(f'./out_pure_maps/{i+1}/B_telescope_all_time_all_binned.fits', field=[1,2], verbose=False, dtype=np.float64))
-#        remove_nans(m_vector)
+        if args.map_disk:
+            m_vector = np.concatenate(mask*hp.read_map(f'{args.workdir}/healpy_maps/B/map_{i}.fits', field=[1,2], verbose=False, dtype=np.float64))
+        else:
+            cl = make_cl(args, comm, 'B')
+            m_vector = np.concatenate(mask*hp.synfast(cl, args.nside, lmax=3*args.nside-1, pol=True, new=True)[1:])
         X_B = sparse.vstack((X_B, m_vector))
     
     X_E = X_E.tocsr()[1:]
     X_B = X_B.tocsr()[1:]
     
     C_E = sparse_covariance(X_E)
-    C_B = sparse_covariance(X_B)
-     
+    C_B = sparse_covariance(X_B) 
+    
+    if rank == 0:
+        print('On each RANK:')
+        print(f'Data is {X_E.nnz/X_E.shape[1]/X_E.shape[0]*100}% filled')
+        print(f'Size is {(X_E.data.nbytes + X_E.indptr.nbytes + X_E.indices.nbytes)/1e6} MB')
+        print(f'Covariance is {C_E.nnz/C_E.shape[0]**2*100}% filled')
+        print(f'Size is {(C_E.data.nbytes + C_E.indptr.nbytes + C_E.indices.nbytes)/1e6} MB')
+
+        
     return C_E, C_B
     
 #@timer
@@ -141,9 +157,6 @@ def main():
     if rank == 0:
         C_E = C_E/size
         C_B = C_B/size
-        
-        print(type(C_E), C_E.shape)
-        print(type(C_B), C_B.shape)
             
         sparse.save_npz(f'{args.workdir}/C_E.npz', C_E)
         sparse.save_npz(f'{args.workdir}/C_B.npz', C_B)

@@ -24,9 +24,9 @@ def load_eigs(args):
     return B_eigs
 
 @timer
-def small_to_zero(v):
+def small_to_zero(args, v):
     hp.disable_warnings()
-    mask = hp.read_map('./toast_pure_maps/0/B_telescope_all_time_all_invnpp.fits',verbose=False, dtype=np.float64)
+    mask = hp.read_map(f'{args.workdir}/small_patch.fits',verbose=False, dtype=np.float64)
     mask = np.concatenate((mask, mask))
     zeros = np.where(mask==0)[0]
     print(f'{len(zeros)} zeros in each column')
@@ -45,14 +45,14 @@ def construct_purification(args, B_eigs):
     print(f'Using the largest {args.n} eigenvectors')
     print(f'Largest eigenvalue: {B_eigs[-1]}')
     print(f'Smallest eigenvalue: {B_eigs[0]}') 
-    B_v = small_to_zero(B_v)
+    B_v = small_to_zero(args, B_v)
     
     B_v = sparse.csr_matrix(B_v)
     pi_B = B_v.dot(linalg.inv(B_v.T.dot(B_v)).dot(B_v.T))
     
     #Check a few eigenvalues to make sure it's indeed a projection
-#     eigs = linalg.eigsh(pi_B, 3, which='LM', return_eigenvectors=False)
-#     print(f'First 3 eigenvalues of projection matrix: {eigs}')
+    eigs = linalg.eigsh(pi_B, 3, which='LM', return_eigenvectors=False)
+    print(f'First 3 eigenvalues of projection matrix: {eigs}')
     
     sparse.save_npz(f'pi_B_{args.n}.npz', pi_B)
 
