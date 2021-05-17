@@ -9,7 +9,7 @@ def add_map_args(parser):
     parser.add_argument(
         '--nside',
         required=False,
-        default=128,
+        default=64,
         type=int,
         help='nside of map',
     )
@@ -39,7 +39,7 @@ def add_map_args(parser):
     parser.add_argument(
         '--outpath',
         required=False,
-        default='./healpy_maps',
+        default='/global/cscratch1/sd/yzh/matrix/healpy_maps',
         help='Output directory',
     )
     
@@ -69,6 +69,7 @@ def make_cl(args, comm, mode):
         ell = np.arange(lmax+1)
 
         prefactor = 2*np.pi/(ell * (ell + 1))
+        #prefactor = 1/ell**2
         prefactor[0] = 0
 
         cl = np.array([cl_TT, cl_EE, cl_BB, cl_TE])
@@ -93,11 +94,11 @@ def load_cl(args, comm):
     #     ell, TT, EE, BB, TE = np.loadtxt('test_dls.txt', unpack=True)
 
         #change the spectrum a little bit
-    #    EE *= 1.5
+    #    EE *= 0
     #    BB *=1.5
 
-        total = np.array([ell, TT, EE, BB, TE])
-        np.savetxt('test_dls.txt', np.transpose(total))
+#         total = np.array([ell, TT, EE, BB, TE])
+#         np.savetxt('test_dls.txt', np.transpose(total))
 
         prefactor = 2*np.pi/(ell * (ell + 1))
         prefactor[0] = 0    
