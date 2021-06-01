@@ -10,6 +10,7 @@ from write_data import timer, add_data_args
     
 @timer
 def center_data(X):
+    print('Centering data...')
     X = X.transpose()
     n = X.shape[1]
     means = X.mean(axis=1)
@@ -23,6 +24,7 @@ def center_data(X):
     
 @timer
 def centered_cov(X):
+    print('Covariance...')
     n = X.shape[1]
     C = X.dot(X.transpose())/n
     
@@ -39,7 +41,7 @@ def make_cov(args):
 
     if rank == 0:
         X_E = sparse.load_npz(f'{args.workdir}/X_E.npz')
-        print(X_E.shape)
+        print(f'Data shape is {X_E.shape}')
         X_E = center_data(X_E)
         C_E = centered_cov(X_E)
         print(f'Covariance is {C_E.shape[1]} by {C_E.shape[0]}, {C_E.nnz/C_E.shape[1]/C_E.shape[0]*100}% filled')
@@ -49,12 +51,13 @@ def make_cov(args):
 
     if rank ==1:
         X_B = sparse.load_npz(f'{args.workdir}/X_B.npz')
-        print(X_B.shape)
+        print(f'Data shape is {X_B.shape}')
         X_B = center_data(X_B)
         C_B = centered_cov(X_B)
 
         sparse.save_npz(f'{args.workdir}/C_B.npz', C_B)
-
+        print('INFO: FINISHED COVARIANCE')
+        
 @timer
 def main():
     parser = argparse.ArgumentParser()

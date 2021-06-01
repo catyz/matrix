@@ -39,7 +39,7 @@ def add_map_args(parser):
     parser.add_argument(
         '--outpath',
         required=False,
-        default='/global/cscratch1/sd/yzh/matrix/healpy_maps',
+        default='/scratch/yuyang/matrix/healpy_maps',
         help='Output directory',
     )
     

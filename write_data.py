@@ -22,7 +22,7 @@ def add_data_args(parser):
     parser.add_argument(
         '--nside',
         required=False,
-        default=64,
+        default=16,
         type=int,
         help='Nside'
     )
@@ -37,14 +37,14 @@ def add_data_args(parser):
     parser.add_argument(
         '--mask',
         required=False,
-        default='/global/cscratch1/sd/yzh/matrix/south_patch_apo_64.fits',
+        default='/scratch/yuyang/matrix/south_patch_apo_64.fits',
         help='Path to mask'
     )
     
     parser.add_argument(
         '--workdir',
         required=False,
-        default='/global/cscratch1/sd/yzh/matrix',
+        default='/scratch/yuyang/matrix',
         help='omegalul'
     )
 
@@ -80,7 +80,8 @@ def write_distributed_data(args, comm):
     
     if rank == 0:
         #mask = hp.ud_grade(hp.read_map(args.mask, verbose=False, dtype=np.float64), nside_out=args.nside)
-        mask = hp.read_map(args.mask, verbose=False, dtype=np.float64)        
+        #mask = hp.read_map(args.mask, verbose=False, dtype=np.float64)     
+        mask = np.ones(npix)
         reals = np.arange(nreal)
         chunks = np.array_split(reals, size)
         m_vector = np.zeros(2*npix)
@@ -140,11 +141,11 @@ def gather_data(args, comm):
         
         for file in glob(f'{args.workdir}/X/*'):
             if 'X_E' in file:
-                print(f'Processing {file}')
+                print(f'Gathering {file}')
                 X_chunk = sparse.load_npz(file)
                 X_E = sparse.vstack((X_E, X_chunk))            
             if 'X_B' in file:
-                print(f'Processing {file}')
+                print(f'Gathering {file}')
                 X_chunk = sparse.load_npz(file)
                 X_B = sparse.vstack((X_B, X_chunk))
             os.remove(file)
@@ -152,9 +153,11 @@ def gather_data(args, comm):
         X_E = X_E.tocsr()[1:]
         X_B = X_B.tocsr()[1:]
         
-        print('Saving...')
+        print('Finished gathering, writing data matrix to disk...')
         sparse.save_npz(f'{args.workdir}/X_E.npz', X_E)
         sparse.save_npz(f'{args.workdir}/X_B.npz', X_B)
+        print('INFO: FINISHED DATA')
+
 
 #@timer
 def main():    
@@ -163,12 +166,12 @@ def main():
     parser = argparse.ArgumentParser()
     add_data_args(parser)
     args = parser.parse_args()
+    print(f'INFO: NSIDE {args.nside}')
     
     hp.disable_warnings()
     write_distributed_data(args, comm)
     gather_data(args, comm)
-    print('Finished')
-    
+        
 if __name__ == "__main__":
     main()
     
