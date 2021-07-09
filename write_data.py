@@ -22,7 +22,7 @@ def add_data_args(parser):
     parser.add_argument(
         '--nside',
         required=False,
-        default=16,
+        default=64,
         type=int,
         help='Nside'
     )
@@ -37,14 +37,14 @@ def add_data_args(parser):
     parser.add_argument(
         '--mask',
         required=False,
-        default='/scratch/yuyang/matrix/south_patch_apo_64.fits',
+        default='/global/cscratch1/sd/yzh/matrix/south_patch_apo_64.fits',
         help='Path to mask'
     )
     
     parser.add_argument(
         '--workdir',
         required=False,
-        default='/scratch/yuyang/matrix',
+        default='/global/cscratch1/sd/yzh/matrix',
         help='omegalul'
     )
 
@@ -77,11 +77,12 @@ def write_distributed_data(args, comm):
     nreal = args.nreal
     nside = args.nside
     npix = hp.nside2npix(nside)
+    sigmab = hp.nside2resol(nside)
     
     if rank == 0:
         #mask = hp.ud_grade(hp.read_map(args.mask, verbose=False, dtype=np.float64), nside_out=args.nside)
-        #mask = hp.read_map(args.mask, verbose=False, dtype=np.float64)     
-        mask = np.ones(npix)
+        mask = hp.read_map(args.mask, verbose=False, dtype=np.float64)     
+        #mask = np.ones(npix)
         reals = np.arange(nreal)
         chunks = np.array_split(reals, size)
         m_vector = np.zeros(2*npix)
@@ -106,14 +107,14 @@ def write_distributed_data(args, comm):
             m_vector = np.concatenate(mask*hp.read_map(f'{args.workdir}/healpy_maps/E/map_{i}.fits', field=[1,2], verbose=False, dtype=np.float64))
         else:
             cl = make_cl(args, comm, 'E')
-            m_vector = np.concatenate(mask*hp.synfast(cl, args.nside, lmax=3*args.nside-1, pol=True, new=True)[1:])
+            m_vector = np.concatenate(mask*hp.synfast(cl, args.nside, sigma=sigmab, lmax=3*args.nside-1, pol=True, new=True)[1:])
         X_E = sparse.vstack((X_E, m_vector))
         
         if args.map_disk:
             m_vector = np.concatenate(mask*hp.read_map(f'{args.workdir}/healpy_maps/B/map_{i}.fits', field=[1,2], verbose=False, dtype=np.float64))
         else:
             cl = make_cl(args, comm, 'B')
-            m_vector = np.concatenate(mask*hp.synfast(cl, args.nside, lmax=3*args.nside-1, pol=True, new=True)[1:])
+            m_vector = np.concatenate(mask*hp.synfast(cl, args.nside, sigma=sigmab, lmax=3*args.nside-1, pol=True, new=True)[1:])
         X_B = sparse.vstack((X_B, m_vector))
     
     X_E = X_E.tocsr()[1:]

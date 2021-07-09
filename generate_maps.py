@@ -39,7 +39,7 @@ def add_map_args(parser):
     parser.add_argument(
         '--outpath',
         required=False,
-        default='/scratch/yuyang/matrix/healpy_maps',
+        default='/global/cscratch1/sd/yzh/matrix/healpy_maps',
         help='Output directory',
     )
     
@@ -68,8 +68,8 @@ def make_cl(args, comm, mode):
 
         ell = np.arange(lmax+1)
 
-        prefactor = 2*np.pi/(ell * (ell + 1))
-        #prefactor = 1/ell**2
+        #prefactor = 2*np.pi/(ell * (ell + 1))
+        prefactor = 1/ell**2
         prefactor[0] = 0
 
         cl = np.array([cl_TT, cl_EE, cl_BB, cl_TE])
@@ -116,6 +116,7 @@ def make_maps(args, comm, mode):
     nprocs = comm.Get_size()
     rank = comm.Get_rank()
     name = MPI.Get_processor_name()
+    sigmab = hp.nside2resol(args.nside)
     
     if rank == 0:
         reals = np.arange(args.nreal)
@@ -141,7 +142,7 @@ def make_maps(args, comm, mode):
             print(f'Rank {rank} is processing realization {i} on processor {name}')
             outdir = f"{args.outpath}"
 
-        m = hp.synfast(cl, args.nside, lmax=3*args.nside-1, pol=True, new=True)
+        m = hp.synfast(cl, args.nside, sigma=sigmab, lmax=3*args.nside-1, pol=True, new=True)
         #m_smooth = hp.smoothing(m, args.beamfwhm *np.pi/10800)
         if not os.path.isdir(outdir):
             os.mkdir(outdir)

@@ -26,7 +26,7 @@ def center_data(X):
 def centered_cov(X):
     print('Covariance...')
     n = X.shape[1]
-    C = X.dot(X.transpose())/n
+    C = X.dot(X.transpose())/(n-1)
     
     return C.tocsr()
 

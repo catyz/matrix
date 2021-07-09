@@ -35,8 +35,8 @@ def load_eigs(args):
 def small_to_zero(args, v):
     hp.disable_warnings()
     #mask = hp.ud_grade(hp.read_map(args.mask, verbose=False, dtype=np.float64), nside_out=args.nside)
-    #mask = hp.read_map(args.mask, verbose=False, dtype=np.float64)
-    mask = np.ones(12*args.nside**2)
+    mask = hp.read_map(args.mask, verbose=False, dtype=np.float64)
+    #mask = np.ones(12*args.nside**2)
     mask = np.concatenate((mask, mask))
     zeros = np.where(mask==0)[0]
     print(f'{len(zeros)} zeros in each column')

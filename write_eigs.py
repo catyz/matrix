@@ -21,7 +21,7 @@ def solve_eigs(args, C_E, C_B):
     print(f'Solving {args.e} eigs...')
     sigma = np.mean(C_E.diagonal())/100
     print(f'Sigma: {sigma}')
-    factor = sparse.identity(C_E.shape[0], format='csr') * sigma**2
+    factor = sparse.identity(C_E.shape[0], format='csr') * sigma
     B_eigs = linalg.eigsh(C_B+factor, args.e, C_E+factor, which='LM', return_eigenvectors=True)
     return B_eigs
 
@@ -32,8 +32,8 @@ def main():
     args = parser.parse_args()
     
     print('Loading covariances...')
-    C_E = sparse.load_npz(f'{args.workdir}/C_E_dense.npz')
-    C_B = sparse.load_npz(f'{args.workdir}/C_B_dense.npz')
+    C_E = sparse.load_npz(f'{args.workdir}/C_E.npz')
+    C_B = sparse.load_npz(f'{args.workdir}/C_B.npz')
 
     B_eigs = solve_eigs(args, C_E, C_B)
     print(f'Eig range is from {B_eigs[0][0]} to {B_eigs[0][-1]}')
